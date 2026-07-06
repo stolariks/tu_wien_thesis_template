@@ -1,0 +1,64 @@
+%==============================================================================
+% Body of the thesis. Write all your chapters here.
+% For a large thesis you can split chapters into separate files and pull them
+% in with \input{...}; this single file is the entry point either way.
+%==============================================================================
+
+\chapter{Introduction}
+\label{chapter:introduction}
+
+The introduction leads into the topic, states the main results and methods,
+and places the work in the context of the existing literature. It contains the
+same information as the Kurzfassung and the Abstract, but in much more detail.
+
+Cross-references work as usual: see \Cref{chapter:main}. Citations use
+BibLaTeX, for example~\cite{MR3457440}.
+
+\chapter{Main part}
+\label{chapter:main}
+
+\section{A section}
+
+Write the core of your thesis here.
+
+\subsection{A figure}
+
+\Cref{fig:example} shows how to include a figure.
+
+\begin{figure}[ht]
+  \centering
+  \includegraphics[width=0.35\textwidth]{figures/TULogo.pdf}
+  \caption{An example figure.}
+  \label{fig:example}
+\end{figure}
+
+\subsection{A table}
+
+\Cref{tab:example} shows a simple table using \texttt{booktabs}.
+
+\begin{table}[ht]
+  \centering
+  \begin{tabular}{lr}
+    \toprule
+    Quantity & Value \\
+    \midrule
+    First    & 1     \\
+    Second   & 2     \\
+    \bottomrule
+  \end{tabular}
+  \caption{An example table.}
+  \label{tab:example}
+\end{table}
+
+\subsection{Some mathematics}
+
+A displayed equation, using a macro from \texttt{macros.sty}:
+\begin{equation}
+  \label{eq:example}
+  \int_{\R} e^{-x^2} \d{x} = \sqrt{\pi}.
+\end{equation}
+
+\chapter{Conclusion}
+\label{chapter:conclusion}
+
+Summarise the results and give an outlook on possible future work.

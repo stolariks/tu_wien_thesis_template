@@ -1,0 +1,130 @@
+%==============================================================================
+% Master's thesis (Diplomarbeit) - TU Wien
+%
+% This is the only file you normally edit besides the content files:
+%   - fill in every detail in the \projectinfo{...} block below
+%   - write the body of the thesis in  content.tex
+%   - write appendices (optional) in   appendix.tex
+%   - add your references to           bibliography.bib
+%
+% Build:  pdflatex thesis -> biber thesis -> pdflatex thesis -> pdflatex thesis
+%==============================================================================
+
+% Export / printing options (edit the option list below):
+%   oneside : single-sided (default). Same margins on every page - best for
+%             on-screen reading and PDF submission.
+%   twoside : double-sided printing. Replace "oneside" with "twoside" so the
+%             text block shifts towards the binding on alternating pages
+%             (left/right), leaving room for binding (BCOR=8mm).
+%   print   : add this option for black hyperlinks (colour link version is the
+%             default). Example: [...,oneside,print].
+\documentclass[a4paper,11pt,bibliography=totoc,listof=totoc,headinclude=true,cleardoublepage=empty,oneside]{thesis}
+
+% Bibliography database
+\addbibresource{bibliography.bib}
+
+% Useful math macros (extend macros.sty with your own commands)
+\usepackage{macros}
+
+% For black links when printing, add the "print" option to \documentclass above.
+
+% PDF metadata
+\hypersetup{
+  pdftitle={Title of the thesis},
+  pdfsubject={Diplomarbeit},
+  pdfauthor={Firstname Lastname},
+  pdfcreator={},
+  pdfproducer={}
+}
+
+%------------------------------------------------------------------------------
+% All the details of the thesis. Edit the highlighted values.
+%------------------------------------------------------------------------------
+\projectinfo{
+  % --- Title page ---------------------------------------------------------
+  title={Title \\[1ex] possibly on several lines},
+  author={Firstname Lastname},
+  matrikelnummer={12345678},
+  street={Street and house number},
+  city={Postal code and city},
+  % Affiliation shown under "ausgef\"uhrt am" on the title page.
+  % "institute" may span several lines (separate them with \\); "university"
+  % is the line below it. Use \"u \"a \"o \ss{} for umlauts / sharp s.
+  institute={Institut f\"ur\\[1ex] Analysis und Scientific Computing},
+  university={TU Wien},
+  % One supervisor, or several separated by commas, e.g.
+  %   supervisor={First Supervisor, Second Supervisor}
+  supervisor={Name of the supervisor},
+  place={Wien},
+  date={\today},
+  %
+  % --- Kurzfassung (German, obligatory; ~250 words) -----------------------
+  kurzfassung={%
+    Deutschsprachige Kurzfassung der Arbeit (auch wenn die Arbeit auf
+    Englisch geschrieben ist). Worum geht es? Was ist die Fragestellung?
+    Was sind die Ergebnisse? Warum ist das wichtig?
+  },
+  %
+  % --- Abstract (English, obligatory; translation of the Kurzfassung) -----
+  abstract={%
+    English abstract of the thesis (even if the thesis is written in German).
+    It should be a translation of the Kurzfassung: what is the topic, the
+    research question, the results, and why they matter?
+  },
+  %
+  % --- Danksagung / Acknowledgement (optional; leave empty to skip) --------
+  acknowledgement={%
+    Here you may thank your supervisor and everyone who supported you.
+    If the work was funded by a project, name the funding body, the project
+    number and the project name.
+  },
+  %
+  % --- Eidesstattliche Erklaerung (declaration, obligatory) ----------------
+  % Adapt the AI-tools sentence to reflect what you actually used.
+  declaration={%
+    Ich erkl\"are an Eides statt, dass ich die vorliegende Diplomarbeit
+    selbstst\"andig und ohne fremde Hilfe verfasst, andere als die angegebenen
+    Quellen und Hilfsmittel nicht benutzt bzw.\ die w\"ortlich oder sinngem\"a{\ss}
+    entnommenen Stellen als solche kenntlich gemacht habe.
+    Hilfsmittel der k\"unstlichen Intelligenz wurden nur verwendet, um
+    sprachliche Formulierungen und Zeichensetzung Korrektur zu lesen und
+    gegebenenfalls zu verbessern.
+  }
+}
+
+\begin{document}
+
+% Body language of the thesis: "english" (default) or "ngerman".
+\selectlanguage{english}
+
+% Title page + Kurzfassung + Abstract + (optional) Danksagung + Erklaerung
+\makefrontmatter
+
+%------------------------------------------------------------------------------
+% Table of contents
+%------------------------------------------------------------------------------
+\pagenumbering{roman}
+\tableofcontents
+% \listoffigures
+% \listoftables
+\cleardoublepage
+\pagenumbering{arabic}
+
+%------------------------------------------------------------------------------
+% Body of the thesis (single input file)
+%------------------------------------------------------------------------------
+\input{content}
+
+%------------------------------------------------------------------------------
+% Appendices (optional) -- uncomment the two lines below to enable them.
+% Content goes in appendix.tex; appendix chapters are numbered A, B, C, ...
+%------------------------------------------------------------------------------
+% \appendix
+% \input{appendix}
+
+%------------------------------------------------------------------------------
+% Bibliography
+%------------------------------------------------------------------------------
+\printbibliography
+
+\end{document}

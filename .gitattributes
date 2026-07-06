@@ -1,0 +1,8 @@
+# Normalize text files to LF (Overleaf and CI are Linux-based)
+* text=auto eol=lf
+
+# Treat these as binary (never touch line endings)
+*.pdf binary
+*.png binary
+*.jpg binary
+*.eps binary

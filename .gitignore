@@ -1,0 +1,27 @@
+# LaTeX build artifacts
+*.aux
+*.bbl
+*.bcf
+*.blg
+*.fdb_latexmk
+*.fls
+*.log
+*.out
+*.run.xml
+*.synctex.gz
+*.toc
+*.lof
+*.lot
+*.nav
+*.snm
+*.vrb
+*.xdv
+
+# Output PDF (comment out the next line if you want to track the built PDF)
+thesis.pdf
+
+# Editor / OS files
+*.bak
+*~
+.DS_Store
+Thumbs.db
