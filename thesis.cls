@@ -32,6 +32,7 @@
 \KOMAoptions{headsepline=true}  % separating line between header and text
 \KOMAoptions{DIV=12}            % type area
 \KOMAoptions{BCOR=8mm}          % binding correction
+\setkomafont{disposition}{\normalcolor\rmfamily\bfseries}
 \pagestyle{headings}            % running heads
 \recalctypearea
 
@@ -43,6 +44,7 @@
 \RequirePackage[ngerman,english]{babel}
 \RequirePackage[utf8]{inputenc}
 \RequirePackage[T1]{fontenc}
+\RequirePackage{lmodern}
 \RequirePackage{csquotes}
 \RequirePackage{etoolbox}
 \RequirePackage{amsmath,amssymb}
